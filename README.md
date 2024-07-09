@@ -5,36 +5,39 @@
 JLab compatible convenience menu for common activities in Jupyter Physical Science Lab.
 
 Current menu items:
-* "Hide before print" hides cells selected for hiding using 
+* "__Hide before print__" hides cells selected for hiding using 
   [jupyter-instructortools
   ](https://github.com/JupyterPhysSciLab/jupyter-instructortools).
-* "Undo hide before print" reveals the hidden cells.
-* "Algebra with Sympy" submenu:
-  * "Insert Algebra with Sympy initialization code" inserts in place of 
+* "__Undo hide before print__" reveals the hidden cells.
+* "__Algebra with Sympy__" submenu:
+  * "__Insert Algebra with Sympy initialization code__" inserts in place of 
     the current selection the properly formed import statement to initialize 
     the Algebra_with_Sympy package.
-  * "Algebra with Sympy Docs" opens a new browser window showing the 
+  * "__Algebra with Sympy Docs__" opens a new browser window showing the 
     documentation.
-* "JupyterPiDaQ" submenu:
-  * "Insert JupyterPiDAQ initialization code" inserts in place of the 
+* "__JupyterPiDaQ__" submenu:
+  * "__Insert JupyterPiDAQ initialization code__" inserts in place of the 
     current selection the properly formed import statement to initialize the 
     JupyterPiDAQ live data acquisition package.
-  * "JupyterPiDAQ Docs" opens the documentation in a new browser window.
-* "Pandas GUI" submenu:
-  * "Insert PandasGUI initialization code" inserts in place of the 
+  * "__JupyterPiDAQ Docs__" opens the documentation in a new browser window.
+* "__Pandas GUI__" submenu:
+  * "__Insert PandasGUI initialization code__" inserts in place of the 
     current selection the properly formed import statement to initialize the 
     PandasGUI package of graphical tools to help generate code to manipulate 
     and display data stored in [Pandas](https://pandas.pydata.org/) DataFrames.
-  * "Insert New Calculated Column GUI" replaces the current selection with a 
+  * "__Insert New Calculated Column GUI__" replaces the current selection 
+    with a 
     function call that opens the graphical user interface to assist in 
     generating code to create a new calculated column in a Pandas DataFrame.
-  * "Insert New Plot GUI" replaces the current selection with a function 
+  * "__Insert New Plot GUI__" replaces the current selection with a function 
     call that opens the graphical user interface to generate code for making 
     a [Plotly](https://plotly.com/python/) plot from data in a Pandas DataFrame.
-  * "Insert New Fit GUI" replaces the current selection with a function call 
+  * "__Insert New Fit GUI__" replaces the current selection with a function 
+    call 
     that opens the graphical user interface to generate code for fitting 
     data using the [lmfit](https://lmfit.github.io/lmfit-py/) package and 
     plotting the results using Plotly.
+  * "__PandasGUI Docs__" opens the documentation in a new browser window.
 
 ## Requirements
 

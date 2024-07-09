@@ -7,5 +7,5 @@
   Algebra with Sympy initialization code", "Algebra with Sympy Docs", "Insert 
   JupyterPiDAQ initialization code", "JupyterPiDAQ Docs", "Insert PandasGUI 
   initialization code", "Insert New Calculated Column GUI", "Insert New Plot 
-  GUI", "Insert New Fit GUI"
+  GUI", "Insert New Fit GUI", "PandasGUI Docs".
 <!-- <END NEW CHANGELOG ENTRY> -->

@@ -335,8 +335,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
          });
          pandasGUIsubmn.addItem({
             command: 'help:open',
-            args:{text: "JupyterPiDAQ Docs",
-            url:"https://jupyterphysscilab.github.io/JupyterPiDAQ/",
+            args:{text: "PandasGUI Docs",
+            url:"https://jupyterphysscilab.github.io/jupyter_Pandas_GUI/",
             newBrowserTab:"true"}
         });
 
