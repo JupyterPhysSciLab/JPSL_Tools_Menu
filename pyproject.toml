@@ -23,6 +23,10 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
+    "jupyterlab >=4.0.0, <5",
+    "algebra_with_sympy",
+    "jupyterpidaq >=0.8.1",
+    "jupyter-pandas-gui >=0.9.0"
 ]
 dynamic = ["version", "description", "authors", "urls", "keywords"]
 

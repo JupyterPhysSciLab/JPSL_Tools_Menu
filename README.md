@@ -1,12 +1,47 @@
 # JPSL_Tools_Menu
-
+<!-- Not yet functional
 [![Github Actions Status](https://github.com/JupyterPhysSciLab/JPSL_Tools_Menu/workflows/Build/badge.svg)](https://github.com/JupyterPhysSciLab/JPSL_Tools_Menu/actions/workflows/build.yml)
-
+-->
 JLab compatible convenience menu for common activities in Jupyter Physical Science Lab.
+
+Current menu items:
+* "Hide before print" hides cells selected for hiding using 
+  [jupyter-instructortools
+  ](https://github.com/JupyterPhysSciLab/jupyter-instructortools).
+* "Undo hide before print" reveals the hidden cells.
+* "Algebra with Sympy" submenu:
+  * "Insert Algebra with Sympy initialization code" inserts in place of 
+    the current selection the properly formed import statement to initialize 
+    the Algebra_with_Sympy package.
+  * "Algebra with Sympy Docs" opens a new browser window showing the 
+    documentation.
+* "JupyterPiDaQ" submenu:
+  * "Insert JupyterPiDAQ initialization code" inserts in place of the 
+    current selection the properly formed import statement to initialize the 
+    JupyterPiDAQ live data acquisition package.
+  * "JupyterPiDAQ Docs" opens the documentation in a new browser window.
+* "Pandas GUI" submenu:
+  * "Insert PandasGUI initialization code" inserts in place of the 
+    current selection the properly formed import statement to initialize the 
+    PandasGUI package of graphical tools to help generate code to manipulate 
+    and display data stored in [Pandas](https://pandas.pydata.org/) DataFrames.
+  * "Insert New Calculated Column GUI" replaces the current selection with a 
+    function call that opens the graphical user interface to assist in 
+    generating code to create a new calculated column in a Pandas DataFrame.
+  * "Insert New Plot GUI" replaces the current selection with a function 
+    call that opens the graphical user interface to generate code for making 
+    a [Plotly](https://plotly.com/python/) plot from data in a Pandas DataFrame.
+  * "Insert New Fit GUI" replaces the current selection with a function call 
+    that opens the graphical user interface to generate code for fitting 
+    data using the [lmfit](https://lmfit.github.io/lmfit-py/) package and 
+    plotting the results using Plotly.
 
 ## Requirements
 
 - JupyterLab >= 4.0.0
+- algebra_with_sympy >= 1.0.0
+- jupyterpidaq >= 0.8.1
+- jupyter-pandas-gui >= 0.9.0
 
 ## Install
 
@@ -72,7 +107,7 @@ In development mode, you will also need to remove the symlink created by `jupyte
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
 folder is located. Then you can remove the symlink named `JPSL_Tools_Menu` within that folder.
 
-### Testing the extension
+### Testing the extension (not complete yet)
 
 #### Frontend tests
 
