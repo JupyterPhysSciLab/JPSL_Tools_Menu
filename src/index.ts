@@ -194,6 +194,36 @@ const plugin: JupyterFrontEndPlugin<void> = {
           },
         });
 
+        const CSVtoPandas:CmdandInfo = {
+            id: 'CSVtoPandas:JPSL_Tools_Menu:main-menu',
+            label: 'Insert load data from CSV code',
+            caption: 'Insert load data from CSV code skeleton.'
+        };
+        commands.addCommand(CSVtoPandas.id, {
+          label: CSVtoPandas.label,
+          caption: CSVtoPandas.caption,
+          execute: () => {
+              let snippet = "import pandas as pd # does nothing if previously imported.\n";
+              snippet += "# Make the appropriate replacements in the following skeleton statement.\n";
+              snippet += "REPLACE_WITH_NAME_FOR_DATAFRAME = pd.read_csv('REPLACE_WITH_FILENAME_OR_PATH')"
+              if (notebookTools.selectedCells){
+                  // We will only act on the first selected cell
+                  const cellEditor = notebookTools.selectedCells[0].editor;
+                  if (cellEditor) {
+                      //const tempPos = {column:0, line:0};
+                      //cellEditor.setCursorPosition(tempPos);
+                      //cellEditor.setSelection({start:tempPos, end: tempPos});
+                      if (cellEditor.replaceSelection){
+                        cellEditor.replaceSelection(snippet);
+                      }
+                  }
+              } else {
+                  window.alert('Please select a cell in a notebook.');
+              }
+              console.log('Insert CSV to Pandas code called.');
+          },
+        });
+
         const newcolGUI:CmdandInfo = {
             id: 'newcolGUI:JPSL_Tools_Menu:main-menu',
             label: 'Insert New Calculated Column GUI',
@@ -320,6 +350,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
          pandasGUIsubmn.addItem({
              command: initpandasGUI.id,
              args: {label: initpandasGUI.label, caption: initpandasGUI.caption}
+         });
+         pandasGUIsubmn.addItem({
+             command: CSVtoPandas.id,
+             args: {label: CSVtoPandas.label, caption: CSVtoPandas.caption}
          });
          pandasGUIsubmn.addItem({
              command: newcolGUI.id,

@@ -25,6 +25,8 @@ Current menu items:
     current selection the properly formed import statement to initialize the 
     PandasGUI package of graphical tools to help generate code to manipulate 
     and display data stored in [Pandas](https://pandas.pydata.org/) DataFrames.
+  * "__Insert load data from CSV code__" replaces the current selection with 
+    the skeleton code for loading data from a CSV file into a Pandas DataFrame.
   * "__Insert New Calculated Column GUI__" replaces the current selection 
     with a 
     function call that opens the graphical user interface to assist in 
