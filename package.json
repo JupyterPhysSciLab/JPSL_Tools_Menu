@@ -1,5 +1,5 @@
 {
-    "name": "JPSL_Tools_Menu",
+    "name": "jpsl-tools-menu",
     "version": "0.2.0",
     "description": "JLab compatible convenience menu for common activities in Jupyter Physical Science Lab.",
     "keywords": [
