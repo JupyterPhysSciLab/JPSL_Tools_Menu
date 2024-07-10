@@ -1,7 +1,7 @@
 # Changelog
 
 <!-- <START NEW CHANGELOG ENTRY> -->
-## 0.2.0 (July X, 2024)
+## 0.2.0 (July 9, 2024)
 * Initial release with the menu items: "Hide before print", "Undo hide before 
   print", "Insert 
   Algebra with Sympy initialization code", "Algebra with Sympy Docs", "Insert 
