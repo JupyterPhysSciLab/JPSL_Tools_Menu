@@ -56,7 +56,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
                                 cell.hide();
                                 found +=1;
                             }
-                            if (metadata.hide_code_on_print){
+                            if (metadata.collapse_code_on_print){
                                 cell.inputHidden = true;
                                 found +=1;
                             }
@@ -93,7 +93,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
                                 cell.show();
                                 found +=1;
                             }
-                            if (metadata.hide_code_on_print){
+                            if (metadata.collapse_code_on_print){
                                 cell.inputHidden = false;
                                 found +=1;
                             }
