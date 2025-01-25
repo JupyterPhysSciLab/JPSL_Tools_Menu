@@ -84,11 +84,47 @@ jupyter labextension develop . --overwrite
 # Rebuild extension Typescript source after making changes
 jlpm build
 ```
+Because the naming conventions in npm and python environments do not match, 
+when testing locally the javascript part of the package may not load 
+properly. To ensure that it does, you need to navigate to the proper data 
+directory in your development environment (probably a Hatch env) and make 
+sure there is a symlink called `jpsl-tools-menu` pointing to the location of 
+the development extension. The normal build protocols will have created a 
+symlink called `JPSL_Tools_Menu`, mimicking the Python name.
+```commandline
+# Find out what your paths are
+jupyter --paths
+```
+The reply will look something like:
+```
+config:
+    ~/.local/share/hatch/env/virtual/jpsl-tools-menu/E5dpYnsy/jpsl-tools-menu
+    /etc/jupyter
+    ~/.jupyter
+    /usr/local/etc/jupyter
+    /etc/jupyter
+data:
+    ~/.local/share/hatch/env/virtual/jpsl-tools-menu/E5dpYnsy/jpsl-tools-menu
+    /share/jupyter
+    ~/.local/share/jupyter
+    /usr/local/share/jupyter
+    /usr/share/jupyter
+runtime:
+    ~/.local/share/jupyter/runtime
+```
+Navigate to the equivalent of the first path in the `data` section above. 
+This should contain the directory `labextensions`. Inside that you should 
+find the problematic symbolic link. Make a link to that with the proper name.
+```commandline
+ln -s JPSL_Tools_Menu jpsl-tools-menu
+```
 
 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
 
 ```bash
-# Watch the source directory in one terminal, automatically rebuilding when needed
+#  Optional: Watch the source directory in one terminal, automatically 
+rebuilding 
+when needed
 jlpm watch
 # Run JupyterLab in another terminal
 jupyter lab
