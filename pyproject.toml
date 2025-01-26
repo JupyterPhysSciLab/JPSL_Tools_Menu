@@ -41,8 +41,8 @@ artifacts = ["JPSL_Tools_Menu/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"JPSL_Tools_Menu/labextension" = "share/jupyter/labextensions/JPSL_Tools_Menu"
-"install.json" = "share/jupyter/labextensions/JPSL_Tools_Menu/install.json"
+"JPSL_Tools_Menu/labextension" = "share/jupyter/labextensions/jpsl-tools-menu"
+"install.json" = "share/jupyter/labextensions/jpsl-tools-menu/install.json"
 
 [tool.hatch.build.hooks.version]
 path = "JPSL_Tools_Menu/_version.py"
